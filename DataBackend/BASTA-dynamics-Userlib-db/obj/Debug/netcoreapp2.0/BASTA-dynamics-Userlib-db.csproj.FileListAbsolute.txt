@@ -1,0 +1,6 @@
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\bin\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.deps.json
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\bin\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.dll
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\obj\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.csprojResolveAssemblyReference.cache
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\obj\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.csproj.CoreCompileInputs.cache
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\obj\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.AssemblyInfoInputs.cache
+C:\Users\s.schoendorfer\Documents\Visual Studio 2017\Projects\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db\obj\Debug\netcoreapp2.0\BASTA-dynamics-Userlib-db.AssemblyInfo.cs
