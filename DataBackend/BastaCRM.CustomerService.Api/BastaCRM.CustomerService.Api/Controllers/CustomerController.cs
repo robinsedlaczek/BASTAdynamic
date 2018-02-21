@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using BastaCRM.CustomerService.Api.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -11,6 +12,7 @@ using Microsoft.WindowsAzure.Storage.Table;
 namespace BastaCRM.CustomerService.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly ICustomerAccess _customerAccess;
