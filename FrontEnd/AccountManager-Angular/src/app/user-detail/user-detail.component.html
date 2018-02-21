@@ -1,0 +1,36 @@
+<button (click)="goBack()">Back</button>
+
+<h3>{{user.firstName}} {{user.lastName}}</h3>
+
+<div class="form-control">
+  <label>Fist Name: </label>
+  <input [(ngModel)]="user.firstName" />
+</div>
+
+<div class="form-control">
+  <label>Last Name</label>
+  <input [(ngModel)]="user.lastName" />
+</div>
+
+<div class="form-control">
+  <label>Company</label>
+  <input [(ngModel)]="user.company" />
+</div>
+
+
+<div class="form-control">
+  <label>Street</label>
+  <input [(ngModel)]="user.address.street" />
+</div>
+
+<div class="form-control">
+  <label>Zip Code</label>
+  <input [(ngModel)]="user.address.zipCode" />
+</div>
+
+<div class="form-control">
+  <label>City</label>
+  <input [(ngModel)]="user.address.city" />
+</div>
+
+<button (click)="saveUser(user)">Save</button>
