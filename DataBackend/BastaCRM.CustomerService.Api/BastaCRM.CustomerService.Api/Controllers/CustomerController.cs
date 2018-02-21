@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BastaCRM.CustomerService.Api.Contracts;
+using BASTA_dynamics_Userlib_db;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,9 +15,9 @@ namespace BastaCRM.CustomerService.Api.Controllers
     [Authorize]
     public class CustomerController : Controller
     {
-        private readonly ICustomerAccess _customerAccess;
+        private readonly ICosmosConnector _customerAccess;
 
-        public CustomerController(ICustomerAccess customerAccess)
+        public CustomerController(ICosmosConnector customerAccess)
         {
             _customerAccess = customerAccess;
         }
@@ -28,7 +28,7 @@ namespace BastaCRM.CustomerService.Api.Controllers
         {
             try
             {
-                var allCustomers = await _customerAccess.GetAllCustomer();
+                var allCustomers = await _customerAccess.GetEmployee("");
                 return Ok(allCustomers);
             }
             catch (Exception ex)
@@ -43,7 +43,7 @@ namespace BastaCRM.CustomerService.Api.Controllers
         {
             try
             {
-                var customer = await _customerAccess.GetCustomerById(id);
+                var customer = await _customerAccess.GetEmployee(id.ToString());
                 return Ok(customer);
             }
             catch (Exception ex)
@@ -54,11 +54,11 @@ namespace BastaCRM.CustomerService.Api.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Customer value)
+        public async Task<IActionResult> Post([FromBody]BASTA_dynamics_Userlib_db.EmployeeObject value)
         {
             try
             {
-                await _customerAccess.CreateCustomer(value);
+                await _customerAccess.SetEmployee(value);
                 return Ok(value);
             }
             catch (Exception ex)
@@ -69,11 +69,11 @@ namespace BastaCRM.CustomerService.Api.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody]Customer value)
+        public async Task<IActionResult> Put(int id, [FromBody]EmployeeObject value)
         {
             try
             {
-                await _customerAccess.UpdateCustomer(value);
+                await _customerAccess.SetEmployee(value);
                 return Ok(value);
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace BastaCRM.CustomerService.Api.Controllers
         {
             try
             {
-                await _customerAccess.DeleteCustomer(id);
+                await _customerAccess.DelEmployee(id.ToString());
                 return Ok(id);
             }
             catch (Exception ex)

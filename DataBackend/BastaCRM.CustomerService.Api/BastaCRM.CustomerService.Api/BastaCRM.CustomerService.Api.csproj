@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Contracts\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -16,6 +17,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BASTA-dynamics-Userlib-db\BASTA-dynamics-Userlib-db.csproj" />
   </ItemGroup>
 
 </Project>

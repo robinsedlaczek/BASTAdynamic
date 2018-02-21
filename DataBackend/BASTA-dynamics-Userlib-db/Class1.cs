@@ -11,7 +11,19 @@ using System.Linq.Expressions;
 
 namespace BASTA_dynamics_Userlib_db
 {
-    public class CosmosConnector
+
+    public interface ICosmosConnector
+    {
+        Task<CompanyObject[]> GetCompany(string filter = "");
+        Task SetCompany(CompanyObject input);
+        Task DelCompany(CompanyObject input);
+
+        Task<EmployeeObject[]> GetEmployee(string filter = "");
+        Task SetEmployee(EmployeeObject input);
+        Task DelEmployee(string id);
+
+    }
+    public class CosmosConnector : ICosmosConnector
     {
         private const string EndpointUri = @"https://cf42c612-0ee0-4-231-b9ee.documents.azure.com:443/";
         private const string PrimaryKey = @"VoV3TzErmDnI7UK3VWZAKADQqjejjdoo30EMR1ps2YdBDqtisXdR6WCD4aKagwOTwz69axUh1NQzZEcDXStMNA==";
@@ -19,10 +31,10 @@ namespace BASTA_dynamics_Userlib_db
         private const string CollName = "Data";
         private DocumentClient client;
 
-        CosmosConnector()
+        public CosmosConnector()
         {
             client = new DocumentClient(new Uri(EndpointUri), PrimaryKey);
-
+            Initiate();
         }
 
         private async void Initiate()
@@ -62,7 +74,7 @@ namespace BASTA_dynamics_Userlib_db
             }
         }
 
-        public async Task<IEnumerable<T>> GetItemsAsync<T>(Expression<Func<T, bool>> predicate, string type)
+        private async Task<IEnumerable<T>> GetItemsAsync<T>(Expression<Func<T, bool>> predicate, string type)
         {
             IDocumentQuery<T> query = client.CreateDocumentQuery<T>(
                 UriFactory.CreateDocumentCollectionUri(CDName, CollName), "SELECT * FROM c where c.type = \""+type+"\"")
@@ -82,7 +94,6 @@ namespace BASTA_dynamics_Userlib_db
         {
             var items = (await GetItemsAsync<CompanyObject>(e => filter == "" ? true : e.Name == filter, "company").ConfigureAwait(false));
             return items.ToArray();
-
         }
 
         public async Task SetCompany(CompanyObject input)
@@ -100,13 +111,13 @@ namespace BASTA_dynamics_Userlib_db
             return items.ToArray();
         }
 
-        public async Task SetEmployee(CompanyObject input)
+        public async Task SetEmployee(EmployeeObject input)
         {
             await this.CreateDocumentIfNotExists(CDName, CollName, input);
         }
-        public async Task DelEmployee(CompanyObject input)
+        public async Task DelEmployee(string id)
         {
-            await DeleteDocument(CDName, CollName, input.Id);
+            await DeleteDocument(CDName, CollName, id);
         }
     }
     public class DBObject
