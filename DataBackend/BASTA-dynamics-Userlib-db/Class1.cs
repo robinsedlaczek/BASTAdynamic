@@ -28,6 +28,34 @@ namespace BASTA_dynamics_Userlib_db
             await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri(CDName), new DocumentCollection { Id = CollName });
 
         }
+
+        public async CompanyObject[] GetCompany(string filter = "")
+        {
+
+        }
+        
+        public async bool SetCompany(CompanyObject input)
+        {
+
+        }
+        public async bool DelCompany(CompanyObject input)
+        {
+
+        }
+
+        public async CompanyObject[] GetEmployee(string filter = "")
+        {
+
+        }
+
+        public async bool SetEmployee(CompanyObject input)
+        {
+
+        }
+        public async bool DelEmployee(CompanyObject input)
+        {
+
+        }
     }
 
     public class CompanyObject

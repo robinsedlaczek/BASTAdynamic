@@ -5564,11 +5564,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\s.schoendorfer\\Documents\\Visual Studio 2017\\Projects\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db.csproj",
+      "projectUniqueName": "C:\\Users\\s.schoendorfer\\source\\repos\\BASTAdynamic\\DataBackend\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db.csproj",
       "projectName": "BASTA-dynamics-Userlib-db",
-      "projectPath": "C:\\Users\\s.schoendorfer\\Documents\\Visual Studio 2017\\Projects\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db.csproj",
+      "projectPath": "C:\\Users\\s.schoendorfer\\source\\repos\\BASTAdynamic\\DataBackend\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db.csproj",
       "packagesPath": "C:\\Users\\s.schoendorfer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s.schoendorfer\\Documents\\Visual Studio 2017\\Projects\\BASTA-dynamics-Userlib-db\\BASTA-dynamics-Userlib-db\\obj\\",
+      "outputPath": "C:\\Users\\s.schoendorfer\\source\\repos\\BASTAdynamic\\DataBackend\\BASTA-dynamics-Userlib-db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
