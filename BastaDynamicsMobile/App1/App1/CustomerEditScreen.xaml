@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BastaDynamicsShared.CustomerEditScreen">
+  <ContentView.Content>
+      <StackLayout>
+          <Label Text="Create new customer" FontSize="12"/>
+          <Grid>
+              <Grid.RowDefinitions>
+                  <RowDefinition/>
+                  <RowDefinition/>
+                  <RowDefinition/>
+                  <RowDefinition/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition/>
+                  <ColumnDefinition/>
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="0" Grid.Row="0" Text="First name:" />
+              <Label Grid.Column="0" Grid.Row="1" Text="Last name:" />
+              <Label Grid.Column="0" Grid.Row="2" Text="Company:" />
+              <Label Grid.Column="0" Grid.Row="3" Text="Address:" />
+              
+              <Editor Grid.Column="1" Grid.Row="0" Text="{Binding FirstName, Mode=TwoWay}"/>
+              <Editor Grid.Column="1" Grid.Row="1" Text="{Binding LastName, Mode=TwoWay}"/>
+              <Editor Grid.Column="1" Grid.Row="2" Text="{Binding Company, Mode=TwoWay}"/>
+              <Editor Grid.Column="1" Grid.Row="3" Text="{Binding Address, Mode=TwoWay}"/>
+              
+            </Grid>
+          <Button Text="Save" Command="{Binding CommandSaveCustomer}"/>
+
+
+
+
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

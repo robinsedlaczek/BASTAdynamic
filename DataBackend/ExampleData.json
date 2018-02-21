@@ -1,0 +1,23 @@
+[
+  {
+    "type": "employee",
+    "firstname": "Hans",
+    "lastname": "Meier-Schulze",
+    "location": "Frankfurt",
+    "company": "54124ef8-b8df-b08c-22b0-aec252f7f655",
+    "id": "714cdfc0-3823-c3ee-da45-5c9a01791ff3"
+  },
+  {
+    "type": "company",
+    "name": "BASTA Corp!",
+    "location": "Frankfurt, Germany",
+    "id": "54124ef8-b8df-b08c-22b0-aec252f7f655"
+  },
+  {
+    "type": "email",
+    "from": "714cdfc0-3823-c3ee-da45-5c9a01791ff3",
+    "to": "714cdfc0-3823-c3ee-da45-5c9a01791ff3",
+    "abstract": "Selbstlob",
+    "id": "1de81245-85bd-73a9-0de2-affbfc3a4ad8"
+  }
+]
