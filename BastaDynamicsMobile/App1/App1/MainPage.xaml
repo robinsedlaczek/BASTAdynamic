@@ -18,7 +18,7 @@
 
     <StackLayout Orientation="Vertical">
 
-        <ListView ItemTemplate="{DynamicResource CustomerItemTemplate}"/>
+        <ListView ItemTemplate="{DynamicResource CustomerItemTemplate}" ItemsSource="{Binding AllCustomers}"/>
         <Button Text="Add new" Command="{Binding CommandCreateCustomer}"/>
     </StackLayout>
 

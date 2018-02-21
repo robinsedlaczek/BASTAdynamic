@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BastaDynamicsBackendInterface\BastaDynamicsBackendInterface.csproj" />
+    <ProjectReference Include="..\..\BastaDynamicsBackendInterface\BastaDynamicBackendInterface.csproj" />
   </ItemGroup>
 
   <ItemGroup>
