@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="CustomerItemTemplate">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding FirstName}" Margin="10"/>
+                <Label Text="{Binding LastName}" Margin="10"/>
+                <Button Text="X" Command="{Binding CommandDeleteCustomer}" CommandParameter="{Binding .}"/>
+            </StackLayout>
+
+        </DataTemplate>
+
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical">
+
+        <ListView ItemTemplate="{DynamicResource CustomerItemTemplate}"/>
+        <Button Text="Add new" Command="{Binding CommandCreateCustomer}"/>
+    </StackLayout>
+
+
+</ContentPage>
