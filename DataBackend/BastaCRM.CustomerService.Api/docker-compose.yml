@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  bastacrm.customerservice.api:
+    image: bastacrm.customerservice.api
+    build:
+      context: .
+      dockerfile: BastaCRM.CustomerService.Api/Dockerfile

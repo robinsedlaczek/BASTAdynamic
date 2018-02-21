@@ -25,6 +25,16 @@ namespace BastaCRM.CustomerService.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ICustomerAccess, CustomerAccess>();
+            services.AddAuthorization();
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ApiName = "api1";
+                });
+
             services.AddMvc();
         }
 
@@ -35,6 +45,8 @@ namespace BastaCRM.CustomerService.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }
